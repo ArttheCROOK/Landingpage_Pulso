@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Pulso</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
@@ -12,22 +13,35 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
     <link rel="stylesheet" href="style.css" />
+
+    <link rel="icon" href="assets/images/Pulso2.png" type="image/png">
   </head>
   <body>
     <header class="header">
       <nav class="navbar">
-        <div class="logo">Pulso</div>
+        <div class="logo">
+          <img src="/assets/images/Pulso1.png" alt="Logo" />
+        </div>
 
         <ul class="nav-links">
-          <li><a href="#">Conocenos</a></li>
-          <li><a href="#">Trabajos</a></li>
-          <li><a href="#">Servicios</a></li>
-          <li><a href="#">Contacto</a></li>
+          <li><a href="#projects">Muestras</a></li>
+          <li><a href="#services">Procesos</a></li>
+          <li><a href="#process">Realizamos</a></li>
+          <li><a href="#contact">Contacto</a></li>
         </ul>
       </nav>
     </header>
-    <section class="hero">
+
+    <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <section id="intro" class="hero">
       <div class="hero-background">
         <div class="gradient-orb orb-1"></div>
         <div class="gradient-orb orb-2"></div>
@@ -40,46 +54,137 @@
       <div class="hero-content reveal">
         <p class="hero-tag">EVENTOS • ASESORIAS • MONTAJE • EXPERIENCIAS</p>
 
-        <h1>
-          Diseñamos experiencias artisticas y digitales con estrategia y
-          emoción.
-        </h1>
+        <h1>Creamos estrategias que laten</h1>
 
         <p class="hero-description">
-          Pulso producciones es una agencia creativa especializada en la
-          creación de experiencias artísticas y digitales. Nos apasiona diseñar
-          eventos, asesorías, montajes y experiencias que combinan estrategia y
-          emoción para conectar con las audiencias de manera única.
+          Pulso producciones es una productora creativa integral enfocada en la
+          creacion de experiencias artisticas, escenicas y visuales de alto
+          impacto.
+          <br />
+          <br />
+          Nace de la union entre artistas, creativos, productores y estrategas
+          que entienden que un evento no es solo logistica: es emocion,
+          identidad, narrativa y conexion humana.
         </p>
 
         <div class="hero-buttons">
-          <a href="#" class="primary-btn"> Como lo hacemos </a>
+          <a href="#contact" class="primary-btn"> Hagamoslo! </a>
 
-          <a href="#" class="secondary-btn"> Hagamoslo! </a>
+          <a href="#process" class="secondary-btn"> Como lo hacemos </a>
         </div>
       </div>
     </section>
-    <section class="section projects-section">
-      <div class="container">
-        <p class="section-label">FEATURED WORK</p>
 
-        <h2 class="section-title">
-          Selected projects and digital experiences.
-        </h2>
+    <section id="projects" class="section projects-section">
+      <div class="container">
+        <p class="section-label">Trabajo destacado</p>
+        <h2 class="section-title">Producción integral de eventos</h2>
+        <p class="section-description">
+          Nos encargamos de cada detalle para que tu evento sea una experiencia
+          memorable, fluida y llena de emoción.
+        </p>
+
+        <!-- CARRUSEL -->
+        <div class="carousel-container">
+          <button class="carousel-arrow prev" aria-label="Anterior">‹</button>
+
+          <div class="carousel-track">
+            <!-- ITEM 1 -->
+            <div class="carousel-card">
+              <div class="carousel-image">
+                <img src="/assets/images/Mind2.jpg" alt="Project" />
+              </div>
+              <div class="carousel-overlay">
+                <span class="project-category">WEB DESIGN</span>
+                <h3>Modern portfolio experience.</h3>
+                <p>
+                  Premium digital experience focused on minimalism, motion and
+                  visual storytelling.
+                </p>
+              </div>
+            </div>
+
+            <!-- ITEM 2 -->
+            <div class="carousel-card">
+              <div class="carousel-image">
+                <img src="/assets/images/Poster3w2.jpg" alt="Project" />
+              </div>
+              <div class="carousel-overlay">
+                <span class="project-category">BRANDING</span>
+                <h3>Visual identity concept.</h3>
+                <p>Identidad corporativa minimalista con impacto visual.</p>
+              </div>
+            </div>
+
+            <!-- ITEM 3 -->
+            <div class="carousel-card">
+              <div class="carousel-image">
+                <img src="/assets/images/W.jpg" alt="Project" />
+              </div>
+              <div class="carousel-overlay">
+                <span class="project-category">UI/UX</span>
+                <h3>Interactive interface system.</h3>
+                <p>Sistemas de diseño fluidos y centrados en el usuario.</p>
+              </div>
+            </div>
+
+            <div class="carousel-card">
+              <div class="carousel-image">
+                <img src="/assets/images/goat.jpg" alt="Project" />
+              </div>
+              <div class="carousel-overlay">
+                <span class="project-category">UI/UX</span>
+                <h3>Interactive interface system.</h3>
+                <p>Sistemas de diseño fluidos y centrados en el usuario.</p>
+              </div>
+            </div>
+
+            <div class="carousel-card">
+              <div class="carousel-image">
+                <img src="/assets/images/Refined.jpg" alt="Project" />
+              </div>
+              <div class="carousel-overlay">
+                <span class="project-category">UI/UX</span>
+                <h3>Interactive interface system.</h3>
+                <p>Sistemas de diseño fluidos y centrados en el usuario.</p>
+              </div>
+            </div>
+
+            <div class="carousel-card">
+              <div class="carousel-image">
+                <img src="/assets/images/OUT.jpg" alt="Project" />
+              </div>
+              <div class="carousel-overlay">
+                <span class="project-category">UI/UX</span>
+                <h3>Interactive interface system.</h3>
+                <p>Sistemas de diseño fluidos y centrados en el usuario.</p>
+              </div>
+            </div>
+
+            <!-- Puedes agregar más cards aquí -->
+          </div>
+
+          <button class="carousel-arrow next" aria-label="Siguiente">›</button>
+        </div>
+      </div>
+    </section>
+    <!--
+    <section id="projects" class="section projects-section">
+      <div class="container">
+        <p class="section-label">Trabajo destacado</p>
+
+        <h2 class="section-title">Produccion integral de eventos</h2>
 
         <p class="section-description">
-          A curated collection of visual systems, interfaces and creative
-          explorations crafted with strategy, aesthetics and emotion.
+          Nos encargamos de cada detalle para que tu evento sea una experiencia
+          memorable, fluida y llena de emocion.
         </p>
 
         <div class="projects-grid">
-          <!-- PROJECT 1 -->
+          PROJECT 1
           <article class="project-card large reveal">
             <div class="project-image">
-              <img
-                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085"
-                alt="Project"
-              />
+              <img src="/assets/images/Mind2.jpg" alt="Project" />
             </div>
 
             <div class="project-content">
@@ -94,13 +199,10 @@
             </div>
           </article>
 
-          <!-- PROJECT 2 -->
+          PROJECT 2
           <article class="project-card reveal-scale">
             <div class="project-image">
-              <img
-                src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3"
-                alt="Project"
-              />
+              <img src="/assets/images/Poster3w2.jpg" alt="Project" />
             </div>
 
             <div class="project-content">
@@ -110,13 +212,10 @@
             </div>
           </article>
 
-          <!-- PROJECT 3 -->
+          PROJECT 3
           <article class="project-card reveal-scale">
             <div class="project-image">
-              <img
-                src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d"
-                alt="Project"
-              />
+              <img src="/assets/images/W.jpg" alt="Project" />
             </div>
 
             <div class="project-content">
@@ -128,10 +227,12 @@
         </div>
       </div>
     </section>
+    -->
+    <!-- </section>
     <section class="section about-section">
       <div class="container">
         <div class="editorial-grid">
-          <!-- LEFT -->
+          LEFT 
           <div class="about-left reveal-left">
             <p class="section-label">PHILOSOPHY</p>
 
@@ -140,7 +241,7 @@
             </h2>
           </div>
 
-          <!-- RIGHT -->
+          RIGHT
           <div class="about-right reveal-right">
             <p class="about-text">
               I combine design, development and visual storytelling to craft
@@ -168,18 +269,18 @@
           </div>
         </div>
       </div>
-    </section>
-    <section class="section services-section">
+    </section> -->
+    <section id="services" class="section services-section">
       <div class="container">
-        <p class="section-label">SERVICES</p>
+        <p class="section-label">Como trabajamos</p>
 
         <h2 class="section-title">
-          Creative solutions crafted for modern brands.
+          Soluciones creativas diseñadas para marcas modernas.
         </h2>
 
         <p class="section-description">
-          Combining strategy, aesthetics and development to create impactful
-          digital experiences.
+          Soluciones creativas, ejecucion profesional, resultados que laten con
+          tu marca.
         </p>
 
         <div class="services-grid">
@@ -187,11 +288,11 @@
           <article class="service-card reveal-scale">
             <div class="service-number">01</div>
 
-            <h3>Web Design</h3>
+            <h3>Asesoria</h3>
 
             <p>
-              Premium and modern interfaces focused on usability, visual impact
-              and conversion.
+              Consultoria creativa, conceptualizacion, direccion de arte,
+              storytelling y diseño de experiencias.
             </p>
           </article>
 
@@ -199,11 +300,11 @@
           <article class="service-card reveal-scale">
             <div class="service-number">02</div>
 
-            <h3>Branding</h3>
+            <h3>Produccion</h3>
 
             <p>
-              Visual identities crafted with strategy, personality and strong
-              emotional presence.
+              Produccion de eventos, shows, danzas y experiencias escenicas de
+              alto impacto.
             </p>
           </article>
 
@@ -211,22 +312,22 @@
           <article class="service-card reveal-scale">
             <div class="service-number">03</div>
 
-            <h3>Frontend Development</h3>
+            <h3>Montaje</h3>
 
             <p>
-              Responsive and immersive experiences developed with clean modern
-              code.
+              Logistica, coordinacion, estructuras, iluminacion, sonido y todo
+              lo necesario para que tu evento sea impecable.
             </p>
           </article>
         </div>
       </div>
     </section>
-    <section class="section process-section">
+    <section id="process" class="section process-section">
       <div class="container">
-        <p class="section-label">PROCESS</p>
+        <p class="section-label">Lo que hacemos</p>
 
         <h2 class="section-title">
-          A refined workflow focused on clarity and experience.
+          Un flujo de trabajo refinado centrado en la claridad y la experiencia.
         </h2>
 
         <div class="process-wrapper">
@@ -235,11 +336,11 @@
             <div class="process-number">01</div>
 
             <div class="process-content">
-              <h3>Discovery & Strategy</h3>
+              <h3>Produccion de eventos</h3>
 
               <p>
-                Understanding the brand, goals and audience to define a strong
-                visual and strategic direction.
+                Logistica, coordinacion, estructuras, iluminacion, sonido y todo
+                lo necesario para que tu evento sea impecable.
               </p>
             </div>
           </article>
@@ -249,11 +350,11 @@
             <div class="process-number">02</div>
 
             <div class="process-content">
-              <h3>Design & Experience</h3>
+              <h3>Produccion artistica</h3>
 
               <p>
-                Crafting immersive interfaces and visual systems with strong
-                focus on emotion and usability.
+                Shows de circo, danza, fuego, performance, personajes y
+                experiencias escenicas de alto impacto.
               </p>
             </div>
           </article>
@@ -263,83 +364,163 @@
             <div class="process-number">03</div>
 
             <div class="process-content">
-              <h3>Development & Launch</h3>
+              <h3>Direccion creativa</h3>
 
               <p>
-                Building responsive and premium digital experiences ready for
-                real-world impact.
+                Conceptualizacion, diseño de experiencias, storytelling,
+                ambientacion y creacion de atmosferas que cuentan historias.
+              </p>
+            </div>
+          </article>
+
+          <article class="process-item reveal">
+            <div class="process-number">04</div>
+
+            <div class="process-content">
+              <h3>Marketing y branding</h3>
+
+              <p>
+                Identidad de marca, diseño grafico, manejo de redes sociales,
+                campañas publicitarias y estrategias de comunicacion.
+              </p>
+            </div>
+          </article>
+
+          <article class="process-item reveal">
+            <div class="process-number">05</div>
+
+            <div class="process-content">
+              <h3>Produccion audiovisual</h3>
+
+              <p>
+                Fotografia, video, reels, contenido digital y cobertura
+                profesional para capturar y potenciar cada momento.
               </p>
             </div>
           </article>
         </div>
       </div>
     </section>
-    <section class="section cta-section">
+    <section id="contact" class="section cta-section">
       <div class="container">
         <div class="cta-wrapper reveal-scale">
-          <p class="section-label">LET'S CREATE</p>
+          <p class="section-label">Vamos a crear</p>
 
           <h2 class="cta-title">
-            Building modern experiences for ambitious brands.
+            Construyendo experiencias modernas para marcas ambiciosas.
           </h2>
 
           <p class="cta-description">
-            Available for selected freelance projects, collaborations and
-            creative partnerships.
+            No solo montamos un evento, creamos una experiencia estetica
+            completa.
           </p>
 
           <div class="cta-buttons">
-            <a href="#" class="primary-btn"> Start a Project </a>
+            <a
+              href="https://wa.me/1234567890"
+              target="_blank"
+              class="primary-btn"
+            >
+              Contactanos</a
+            >
 
-            <a href="#" class="secondary-btn"> Contact Me </a>
+            <!-- <a href="#" class="secondary-btn"> Comencemos un proyecto! </a> -->
           </div>
         </div>
       </div>
     </section>
+
+    <!--Overlay para el sonido al hacer clic-->
+    <div
+      id="sound-overlay"
+      style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        cursor: pointer;
+      "
+    ></div>
+
+    <script>
+      document.getElementById("sound-overlay").addEventListener("click", () => {
+        const sound = document.getElementById("bg-sound");
+        sound.volume = 0.15;
+        sound.loop = true;
+        sound.play();
+
+        // Oculta el overlay después del primer clic
+        document.getElementById("sound-overlay").style.display = "none";
+      });
+    </script>
+
     <footer class="footer">
       <div class="container">
         <div class="footer-top">
           <!-- LEFT -->
-          <div class="footer-brand">
-            <h2>ART THE CROOK</h2>
+          <div class="footer-brand logo">
+            <img src="assets/images/Pulso1.png" alt="Logo-footer">
 
-            <p>
-              Crafting premium digital experiences through design, development
-              and emotion.
-            </p>
+            <p>Creando experiencias que laten</p>
           </div>
 
           <!-- RIGHT -->
           <div class="footer-links">
             <div class="footer-column">
-              <span> Navigation </span>
+              <span> Navegacion </span>
 
-              <a href="#"> About </a>
+              <a href="#services"> Procesos </a>
 
-              <a href="#"> Projects </a>
+              <a href="#projects"> Muestras </a>
 
-              <a href="#"> Services </a>
+              <a href="#process"> Realizamos </a>
             </div>
 
             <div class="footer-column">
-              <span> Socials </span>
+              <span> Redes sociales </span>
 
               <a href="#"> Instagram </a>
 
               <a href="#"> Behance </a>
 
-              <a href="#"> LinkedIn </a>
+              <a href="#"> TikTok </a>
             </div>
           </div>
         </div>
 
         <div class="footer-bottom">
-          <p>© 2026 Art the Crook. All rights reserved.</p>
+          <!-- Probar sonido
+          <button
+            id="test-sound"
+            style="position: fixed; bottom: 10px; left: 10px; z-index: 999"
+          >
+            🔊 Probar sonido
+          </button>
 
-          <p>Designed & Developed by Santiago Arango.</p>
+          <script>
+            document
+              .getElementById("test-sound")
+              .addEventListener("click", () => {
+                const sound = document.getElementById("bg-sound");
+                sound.volume = 0.40;
+                sound.play();
+              });
+          </script>
+            -->
+          <p>© 2026 Pulso producciones. All rights reserved.</p>
+
+          <p>Diseñado y desarrollado por ARTtheCROOK.</p>
         </div>
       </div>
     </footer>
+    <audio id="bg-sound" loop preload="auto">
+      <source
+        src="/assets/audio/brvhrtz-heartbeat-01-brvhrtz-225058.mp3"
+        type="audio/mpeg"
+      />
+    </audio>
     <script src="app.js"></script>
   </body>
 </html>

@@ -1,0 +1,21 @@
+# Ignorar carpetas con imágenes pesadas
+/assets/audio
+/assets/images
+#/assets/images/goat.jpg
+#/assets/images/Mind2.jpg
+#/assets/images/OUT.jpg
+#/assets/images/Pulso1.png
+#/assets/images/Pulso2.png
+#/assets/images/Poster3w2.jpg
+#/assets/images/Refined.jpg
+#/assets/images/W.jpg
+
+# Ignorar archivos pesados
+*.psd
+*.ai
+*.raw
+*.heic
+
+# Opcional: ignorar todas las imágenes? (no recomendado)
+# *.jpg
+# *.png

@@ -30,18 +30,206 @@ body::before {
   background:
     radial-gradient(
       circle at top left,
-      rgba(139, 92, 246, 0.08),
+      rgba(237, 178, 15, 0.393),
       transparent 40%
     ),
     radial-gradient(
       circle at bottom right,
-      rgba(255, 255, 255, 0.03),
+      rgba(229, 182, 12, 0.069),
       transparent 40%
     );
 
   pointer-events: none;
 
   z-index: -1;
+}
+
+/* NUEVO: Destellos paparazzi (se agrega encima) */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+
+  background-image: 
+    /* Destellos grandes (más visibles) */
+    radial-gradient(
+      4px 4px at 15% 25%,
+      rgba(255, 255, 255, 0.95),
+      transparent 60%
+    ),
+    radial-gradient(
+      3px 3px at 65% 75%,
+      rgba(255, 255, 255, 0.85),
+      transparent 60%
+    ),
+    radial-gradient(
+      5px 4px at 88% 12%,
+      rgba(255, 255, 255, 0.9),
+      transparent 60%
+    ),
+    radial-gradient(
+      3px 3px at 42% 88%,
+      rgba(255, 255, 255, 0.8),
+      transparent 60%
+    ),
+    radial-gradient(
+      4px 3px at 92% 45%,
+      rgba(255, 255, 255, 0.85),
+      transparent 60%
+    ),
+    radial-gradient(
+      3px 4px at 8% 60%,
+      rgba(255, 255, 255, 0.8),
+      transparent 60%
+    ),
+    radial-gradient(
+      4px 4px at 55% 15%,
+      rgba(255, 255, 255, 0.9),
+      transparent 60%
+    ),
+    /* Destellos medianos */
+    radial-gradient(
+        2px 2px at 25% 55%,
+        rgba(255, 255, 255, 0.7),
+        transparent 70%
+      ),
+    radial-gradient(
+      2px 2px at 75% 35%,
+      rgba(255, 255, 255, 0.7),
+      transparent 70%
+    ),
+    radial-gradient(
+      2px 2px at 5% 85%,
+      rgba(255, 255, 255, 0.6),
+      transparent 70%
+    ),
+    radial-gradient(
+      2px 2px at 95% 95%,
+      rgba(255, 255, 255, 0.6),
+      transparent 70%
+    ),
+    radial-gradient(
+      2px 2px at 35% 5%,
+      rgba(255, 255, 255, 0.7),
+      transparent 70%
+    ),
+    radial-gradient(
+      2px 2px at 68% 52%,
+      rgba(255, 255, 255, 0.6),
+      transparent 70%
+    ),
+    radial-gradient(
+      2px 2px at 50% 72%,
+      rgba(255, 255, 255, 0.7),
+      transparent 70%
+    ),
+    /* Destellos pequeños (relleno) */
+    radial-gradient(
+        1px 1px at 12% 38%,
+        rgba(255, 255, 255, 0.5),
+        transparent 80%
+      ),
+    radial-gradient(
+      1px 1px at 48% 62%,
+      rgba(255, 255, 255, 0.5),
+      transparent 80%
+    ),
+    radial-gradient(
+      1px 1px at 82% 18%,
+      rgba(255, 255, 255, 0.5),
+      transparent 80%
+    ),
+    radial-gradient(
+      1px 1px at 33% 92%,
+      rgba(255, 255, 255, 0.5),
+      transparent 80%
+    ),
+    radial-gradient(
+      1px 1px at 77% 82%,
+      rgba(255, 255, 255, 0.4),
+      transparent 80%
+    ),
+    radial-gradient(
+      1px 1px at 18% 68%,
+      rgba(255, 255, 255, 0.4),
+      transparent 80%
+    ),
+    radial-gradient(
+      1px 1px at 62% 8%,
+      rgba(255, 255, 255, 0.5),
+      transparent 80%
+    );
+  filter: drop-shadow(0 0 2px white);
+
+  background-repeat: no-repeat;
+  opacity: 0;
+  animation: paparazziFlicker 4s ease-in-out infinite;
+}
+
+@keyframes paparazziFlicker {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 0.9;
+  }
+  8% {
+    opacity: 0;
+  }
+  12% {
+    opacity: 0.7;
+  }
+  15% {
+    opacity: 0;
+  }
+  18% {
+    opacity: 0.85;
+  }
+  22% {
+    opacity: 0;
+  }
+  35% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  43% {
+    opacity: 0;
+  }
+  46% {
+    opacity: 0.75;
+  }
+  50% {
+    opacity: 0;
+  }
+  65% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0.8;
+  }
+  73% {
+    opacity: 0;
+  }
+  76% {
+    opacity: 0.65;
+  }
+  79% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  93% {
+    opacity: 0.7;
+  }
+  96% {
+    opacity: 0;
+  }
 }
 
 .container {
@@ -136,13 +324,10 @@ body::before {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
 }
 
-.logo {
-  font-family: "Space Grotesk", sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: 2px;
-
-  cursor: pointer;
+.logo img {
+  height: 40px;
+  width: auto;
+  display: block;
 }
 
 .nav-links {
@@ -176,7 +361,7 @@ body::before {
 
   position: relative;
 
-  padding: 100px 8%;
+  padding: 160px 8% 100px;
 
   overflow: hidden;
 }
@@ -244,8 +429,8 @@ body::before {
 .primary-btn {
   text-decoration: none;
 
-  background: #f5f5f5;
-  color: #0b0b0b;
+  background: #dfb109dd;
+  color: #070707;
 
   padding: 16px 28px;
 
@@ -296,7 +481,7 @@ body::before {
   width: 600px;
   height: 600px;
 
-  background: rgba(139, 92, 246, 0.18);
+  background: rgba(184, 155, 28, 0.095);
 
   top: -100px;
   left: -100px;
@@ -369,7 +554,7 @@ body::before {
     transparent
   );
 }
-
+/*
 .projects-grid {
   margin-top: 100px;
 
@@ -490,19 +675,167 @@ body::before {
 .project-card:hover img {
   transform: scale(1.06);
 }
+*/
 
-@media (max-width: 900px) {
-  .project-card,
-  .project-card.large {
-    grid-column: span 12;
+/* ========== CARRUSEL ========== */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 60px;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  padding: 20px 0 40px 0;
+}
+
+/* Ocultar scrollbar en navegadores WebKit (Chrome, Safari) */
+.carousel-track::-webkit-scrollbar {
+  height: 6px;
+}
+
+.carousel-track::-webkit-scrollbar-track {
+  background: #1a1a1a;
+  border-radius: 10px;
+}
+
+.carousel-track::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 10px;
+}
+
+.carousel-card {
+  flex: 0 0 320px;
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  background: #111;
+  transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+  cursor: pointer;
+}
+
+/* EFECTO HOVER: agrandar */
+.carousel-card:hover {
+  transform: scale(1.05);
+  z-index: 10;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
+}
+
+.carousel-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.carousel-card:hover .carousel-image img {
+  transform: scale(1.08);
+}
+
+/* OVERLAY con descripción (aparece al hover) */
+.carousel-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  padding: 60px 24px 24px 24px;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.carousel-card:hover .carousel-overlay {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.carousel-overlay .project-category {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #aaa;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.carousel-overlay h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: white;
+}
+
+.carousel-overlay p {
+  font-size: 14px;
+  color: #ccc;
+  line-height: 1.4;
+}
+
+/* FLECHAS DE NAVEGACIÓN */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: white;
+  font-size: 32px;
+  cursor: pointer;
+  z-index: 20;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-arrow:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-50%) scale(1.05);
+}
+
+.prev {
+  left: 8px;
+}
+
+.next {
+  right: 8px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .carousel-card {
+    flex: 0 0 280px;
   }
 
-  .project-card {
-    min-height: 450px;
+  .carousel-arrow {
+    display: none; /* en móvil mejor scroll nativo */
   }
 
-  .project-content {
-    padding: 30px;
+  .carousel-overlay {
+    opacity: 1;
+    transform: translateY(0);
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.95) 0%,
+      rgba(0, 0, 0, 0.4) 100%
+    );
   }
 }
 
@@ -738,9 +1071,9 @@ body::before {
 
   border-radius: 50%;
 
-  background: #8b5cf6;
+  background: #eef65c;
 
-  box-shadow: 0 0 25px rgba(139, 92, 246, 0.6);
+  box-shadow: 0 0 25px rgba(246, 236, 92, 0.6);
 }
 
 .process-content h3 {
@@ -764,7 +1097,7 @@ body::before {
 }
 
 .process-item:hover {
-  transform: translateX(10px);
+  transform: translateX(10px) !important;
 }
 
 @media (max-width: 768px) {
@@ -813,7 +1146,7 @@ body::before {
 
   background: radial-gradient(
     circle,
-    rgba(139, 92, 246, 0.18),
+    rgba(246, 205, 92, 0.18),
     transparent 70%
   );
 
@@ -1109,4 +1442,50 @@ body::before {
 .service-card,
 .cta-wrapper {
   will-change: transform;
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
+  z-index: 100;
+
+  animation: fadeInUp 5s ease-out;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  background: #128c7e;
+}
+
+.whatsapp-float i {
+  font-size: 35px;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Oculta el reproductor por completo */
+audio {
+  display: none;
 }
